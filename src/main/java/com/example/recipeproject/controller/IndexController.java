@@ -18,6 +18,10 @@ public class IndexController {
     @Autowired
     private RecipeService recipeService;
 
+    public IndexController(RecipeService recipeService) {
+        this.recipeService = recipeService;
+    }
+
     @RequestMapping({"","/","/index"})
     public String getIndexPage(Model model){
 
